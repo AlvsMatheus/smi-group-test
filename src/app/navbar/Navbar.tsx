@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaBars } from "react-icons/fa";
-import logo from "/public/smi-logo.png"
+import logo from "/public/images/smi-logo.png"
 import Image from 'next/image';
 
 const Navbar = () => {
