@@ -1,0 +1,14 @@
+Ignorar as dependências (elas são instaladas DENTRO do contêiner)
+
+node_modules
+npm-debug.log
+
+Ignorar a pasta do back-end (não pertence a este contêiner)
+
+backend
+
+Ignorar os arquivos do Next.js e Docker
+
+.next
+Dockerfile.frontend
+docker-compose.yml
