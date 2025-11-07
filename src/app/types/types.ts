@@ -14,7 +14,7 @@ export interface Demand {
 export interface TableProps {
   demands: Demand[];
   onDelete: (id: number) => void;
-  onEdit: (demand: Demand) => void; 
+  onEdit: (demand: Demand) => void;
 }
 
 // DemandModal.tsx
@@ -22,13 +22,13 @@ export interface TableProps {
 export interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onDemandSaved: () => void; 
-  demandToEdit: Demand | null; 
+  onDemandSaved: () => void;
+  demandToEdit: Demand | null;
 }
 
 // ButtonAdd.tsx
 
 export interface ButtonType {
-    label: string
-    onClick?: () => void
+  label: string;
+  onClick?: () => void;
 }
