@@ -1,9 +1,5 @@
 import React from 'react'
-
-interface ButtonType {
-    label: string
-    onClick?: () => void
-}
+import { ButtonType } from '../types/types'
 
 const ButtonAdd = ({ label, onClick }: ButtonType) => {
   return (

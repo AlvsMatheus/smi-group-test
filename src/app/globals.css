@@ -32,6 +32,10 @@ body {
   }
 }
 
+.table-title {
+ @apply p-3 text-sm text-center font-semibold text-gray-600 uppercase
+}
+
 .table-item {
- 
+  @apply p-3 text-center text-sm text-gray-700;
 }

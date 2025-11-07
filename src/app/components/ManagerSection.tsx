@@ -4,15 +4,8 @@ import React, { useEffect, useState } from "react";
 import ButtonAdd from "./ButtonAdd";
 import ManagerTable from "./ManagerTable";
 import DemandModal from "./DemandModal";
+import  { Demand } from "../types/types";
 
-interface Demand {
-  id: number;
-  periodo: string;
-  skus: number;
-  totalPlan: number;
-  totalProd: number;
-  status: string;
-}
 
 const ManagerSection = () => {
   
@@ -70,7 +63,7 @@ const ManagerSection = () => {
   }
 
   return (
-    <article className="flex flex-col gap-4 h-[40rem] w-[80%]">
+    <article className="flex flex-col gap-4 h-[40rem] md:mt-[5rem] lg:mt-0 w-[80%]">
       <h1 className="text-black text-2xl font-bold uppercase">
         Demanda de Produção de latinhas
       </h1>

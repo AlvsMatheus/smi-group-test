@@ -1,20 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
+import { ModalProps, Demand } from '../types/types';
 
-interface Demand {
-  id: number;
-  periodo: string;
-  skus: number;
-  totalPlan: number;
-  totalProd: number;
-  status: string;
-}
-
-interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onDemandSaved: () => void; 
-  demandToEdit: Demand | null; 
-}
 
 const DemandModal = ({ isOpen, onClose, onDemandSaved, demandToEdit }: ModalProps) => {
 
