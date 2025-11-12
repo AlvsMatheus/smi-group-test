@@ -2,9 +2,7 @@ import React from "react";
 import { FaPen, FaTrash } from "react-icons/fa";
 import { TableProps } from "../types/types";
 
-
 const ManagerTable = ({ demands, onDelete, onEdit }: TableProps) => {
-  
   const getStatusClass = (status: string) => {
     switch (status) {
       case "PLANEJAMENTO":
@@ -21,7 +19,6 @@ const ManagerTable = ({ demands, onDelete, onEdit }: TableProps) => {
   return (
     <article className="w-full h-full bg-white rounded-lg shadow-lg overflow-y-auto">
       <table className="w-full">
-      
         <thead className="sticky top-0 bg-gray-100 border-b border-gray-300">
           <tr className="bg-[#d1d1d1]">
             <th className="table-title">Editar</th>
@@ -33,35 +30,37 @@ const ManagerTable = ({ demands, onDelete, onEdit }: TableProps) => {
             <th className="table-title">Remover</th>
           </tr>
         </thead>
-        
+
         <tbody className="divide-y divide-gray-200 overflow-y-auto">
-          
           {demands.map((demand) => (
             <tr key={demand.id} className="hover:bg-gray-50">
-            
               <td className="text-center p-3">
                 {demand.status !== "CONCLUIDO" ? (
-                  <button 
+                  <button
                     onClick={() => onEdit(demand)}
                     className="text-blue-600 hover:text-blue-800"
                   >
-                    <FaPen/>
+                    <FaPen />
                   </button>
                 ) : (
                   <span className="text-gray-400">-</span>
                 )}
               </td>
-              
+
               <td className="table-item">{demand.periodo}</td>
               <td className="table-item">{demand.skus}</td>
               <td className="table-item">{demand.totalPlan}</td>
               <td className="table-item">{demand.totalProd}</td>
-              <td className={`p-3 text-center text-xs font-semibold ${getStatusClass(demand.status)}`}>
+              <td
+                className={`p-3 text-center text-xs font-semibold ${getStatusClass(
+                  demand.status
+                )}`}
+              >
                 {demand.status}
               </td>
-            
+
               <td className="text-center p-3">
-                <button 
+                <button
                   onClick={() => onDelete(demand.id)}
                   className="text-red-600 hover:text-red-800"
                   aria-label="Remover demanda"

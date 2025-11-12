@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <main className="relative flex justify-center items-center min-h-screen w-full bg-[#f1f3f4] bg-center">
       <Navbar />
-        <ManagerSection />
+      <ManagerSection />
       <Footer />
     </main>
   );
